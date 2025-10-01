@@ -70,4 +70,16 @@ This structured dataset became the foundation for a PostgreSQL pipeline.
 ---
 
 ## 📂 Repo Structure
+restaurant-sql-consolidation/
+├─ sql/
+│  ├─ 00_create_schemas.sql
+│  ├─ 01_create_staging_tables.sql
+│  ├─ 02_load_data_instructions.md
+│  ├─ 03_build_core_tables.sql
+│  ├─ 04_views_kpis.sql
+│  ├─ 05_cte_anomalies.sql
+│  └─ 99_drop_all.sql
+├─ erd/
+│  └─ restaurant_erd.png
+├─ README.md
 
