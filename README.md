@@ -67,25 +67,45 @@ This structured dataset became the foundation for a PostgreSQL pipeline.
 - **Revenue growth**: Replicated successful festival campaigns across branches.  
 - **Decision-making**: Delivered a daily KPI view (`v_ops_daily`) → managers could see sales, footfall, and labor efficiency in one place.  
 
+
 ---
 
 ## 📂 Repo Structure
+
+```text
 restaurant-sql-consolidation/
 ├─ sql/
-│ ├─ 00_create_schemas.sql # create schemas: staging, core, ref
-│ ├─ 01_create_staging_tables.sql # move raw data from public -> staging
-│ ├─ 02_load_data_instructions.md # notes for CSV imports
-│ ├─ 03_build_core_tables.sql # dim_branch + fact_daily + loads
-│ ├─ 04_views_kpis.sql # v_fact_daily_enriched + v_ops_daily
-│ ├─ 05_cte_anomalies.sql # anomaly & branch-comparison queries
-│ └─ 99_drop_all.sql # cleanup (drop schemas)
-├─ erd/
-│ ├─ tech_schema.png # staging/ref/core (full)
-│ └─ manager_schema.png # simplified (dim + fact + ops view)
-├─ results/
-│ ├─ zero_sales_staff_present.png
-│ ├─ outliers_3sigma.png
-│ ├─ busy_underperforming.csv
-│ └─ branch_head_to_head.png
+│  ├─ 00_create_schemas.sql          # create schemas: staging, core, ref  
+│  ├─ 01_create_staging_tables.sql   # move raw data from public -> staging  
+│  ├─ 02_load_data_instructions.md   # notes for CSV imports  
+│  ├─ 03_build_core_tables.sql       # dim_branch + fact_daily + loads  
+│  ├─ 04_views_kpis.sql              # v_fact_daily_enriched + v_ops_daily  
+│  ├─ 05_cte_anomalies.sql           # anomaly & branch-comparison queries  
+│  └─ 99_drop_all.sql                # cleanup (drop schemas)  
+├─ erd/  
+│  ├─ tech_schema.png                # staging/ref/core (full)  
+│  └─ manager_schema.png             # simplified (dim + fact + ops view)  
+├─ results/  
+│  ├─ zero_sales_staff_present.png  
+│  ├─ outliers_3sigma.png  
+│  ├─ busy_underperforming.csv  
+│  └─ branch_head_to_head.png  
 └─ README.md
+```
+
+---
+
+## ⚙️ Tech Stack
+- **PostgreSQL** (schema design, joins, CTEs, anomaly detection)  
+- **pgAdmin** (SQL development, ERD export)  
+- **dbdiagram.io** (ERD diagrams for repo)  
+- **Excel** (source data collection & governance)  
+
+---
+
+## 🏷️ Attribution
+This project was delivered during my role at **Blue Sapphire Tech Ltd.**, supporting the **Sheela Palace restaurant group** in Ireland.  
+
+
+
 
