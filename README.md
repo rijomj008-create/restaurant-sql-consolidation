@@ -72,20 +72,20 @@ This structured dataset became the foundation for a PostgreSQL pipeline.
 ## 📂 Repo Structure
 restaurant-sql-consolidation/
 ├─ sql/
-│  ├─ 00_create_schemas.sql          # create schemas: staging, core, ref
-│  ├─ 01_create_staging_tables.sql   # move raw data from public -> staging
-│  ├─ 02_load_data_instructions.md   # short notes for CSV imports (optional)
-│  ├─ 03_build_core_tables.sql       # dim_branch + fact_daily + loads
-│  ├─ 04_views_kpis.sql              # v_fact_daily_enriched + v_ops_daily
-│  ├─ 05_cte_anomalies.sql           # anomaly & branch-comparison queries
-│  └─ 99_drop_all.sql                # cleanup (drops project schemas)
+│ ├─ 00_create_schemas.sql # create schemas: staging, core, ref
+│ ├─ 01_create_staging_tables.sql # move raw data from public -> staging
+│ ├─ 02_load_data_instructions.md # notes for CSV imports
+│ ├─ 03_build_core_tables.sql # dim_branch + fact_daily + loads
+│ ├─ 04_views_kpis.sql # v_fact_daily_enriched + v_ops_daily
+│ ├─ 05_cte_anomalies.sql # anomaly & branch-comparison queries
+│ └─ 99_drop_all.sql # cleanup (drop schemas)
 ├─ erd/
-│  ├─ tech_schema.png                # staging/ref/core (full)
-│  └─ manager_schema.png             # simplified (dim + fact + ops view)
-├─ results/                          # optional: screenshots/CSVs from pgAdmin
-│  ├─ zero_sales_staff_present.png
-│  ├─ outliers_3sigma.png
-│  ├─ busy_underperforming.csv
-│  └─ branch_head_to_head.png
+│ ├─ tech_schema.png # staging/ref/core (full)
+│ └─ manager_schema.png # simplified (dim + fact + ops view)
+├─ results/
+│ ├─ zero_sales_staff_present.png
+│ ├─ outliers_3sigma.png
+│ ├─ busy_underperforming.csv
+│ └─ branch_head_to_head.png
 └─ README.md
 
